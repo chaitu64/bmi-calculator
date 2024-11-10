@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthy Diet Preparation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <div class="overlay"></div>
+
+  <!-- Wrapper for flexbox layout -->
+  <div class="main-content">
+
+      <!-- Main Container for BMI Calculator -->
+      <div class="container">
+          <h1>BMI Calculator</h1>
+          <label for="weight">Weight (kg):</label>
+          <input type="number" id="weight" placeholder="Enter your weight (69)">
+          <br>
+          <label for="height">Height (cm):</label>
+          <input type="number" id="height" placeholder="Enter your height (160)">
+          <br>
+
+          <button class="button" onclick="calculateBMI()">
+              Calculate BMI
+              <div class="hoverEffect">
+                <div></div>
+              </div>
+          </button>
+          
+          <p id="result"></p>
+
+          <!-- Buttons to toggle between converters -->
+          <div class="converter-buttons">
+
+            <button class="button" onclick="toggleConverter('feetToCm')">
+              Convert to CM
+              <div class="hoverEffect">
+                <div></div>
+              </div>
+            </button>
+
+            <button class="button" onclick="toggleConverter('poundToKg')">
+              Convert to KGs
+              <div class="hoverEffect">
+                <div></div>
+              </div>
+            </button>
+
+          </div>
+      </div>
+
+      <!-- Feet to CM Converter -->
+      <div class="converter" id="feetToCmConverter">
+          <h2>Feet and Inches to Centimeters Converter</h2>
+          <div class="side-by-side">
+            <div>
+              <label for="feet">Enter Feet:</label>
+              <input type="number" id="feet" placeholder="Enter Feet (5)">
+            </div>
+            <div>
+              <label for="inches">Enter Inches:</label>
+              <input type="number" id="inches" placeholder="Enter Inches (3)">
+            </div>
+          </div>
+
+          <button class="button" onclick="convert()">
+              Convert
+              <div class="hoverEffect">
+                <div></div>
+              </div>
+          </button>
+
+          <p id="result1"></p>
+      </div>
+
+      <!-- Pounds to KGs Converter -->
+      <div class="converter" id="poundToKgConverter">
+          <h2>Pounds to Kilograms Converter</h2>
+          <label for="pounds-input">Enter pounds:</label>
+          <input type="number" id="pounds-input" placeholder="Enter pounds (199 lbs)">
+
+          <button class="button" onclick="convertToKilograms()">
+              Convert
+              <div class="hoverEffect">
+                <div></div>
+              </div>
+          </button>
+
+          <p id="result2"></p>
+      </div>
+
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
